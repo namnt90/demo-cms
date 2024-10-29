@@ -81,6 +81,8 @@ export const SlotDialog = ({
                     const types = checked
                       ? [...slotData.acceptedTypes, 'bundle']
                       : slotData.acceptedTypes.filter(t => t !== 'bundle');
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-expect-error
                     setSlotData({...slotData, acceptedTypes: types});
                   }}
                 />
